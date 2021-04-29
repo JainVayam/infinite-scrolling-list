@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-  Container, List, ListItem, ListItemIcon, ListItemText, Divider,
+  Container, List, ListItem, ListItemIcon, ListItemText, Divider, LinearProgress,
 } from '@material-ui/core'
 
 import useContactListController from './controller'
@@ -8,7 +8,9 @@ import useStyles from './style'
 
 const ContactList = () => {
   const classes = useStyles()
-  const { onScroll, contactList, ref } = useContactListController()
+  const {
+    onScroll, contactList, ref, loading,
+  } = useContactListController()
 
   return (
     <Container ref={ ref } onScroll={ onScroll } className={ classes.container }>
@@ -25,6 +27,7 @@ const ContactList = () => {
           </div>
         ))}
       </List>
+      {loading && <LinearProgress />}
     </Container>
   )
 }

@@ -27,3 +27,6 @@ In the project directory's terminal run the below command
 ```
 yarn run start
 ```
+
+### Assumption
+Added a delay of 2 seconds before the next batch is fetched.
