@@ -1,4 +1,5 @@
 export const loginCredentils = {
-  username: 'foo',
-  password: 'bar',
+  foo: {
+    password: 'bar',
+  },
 }
