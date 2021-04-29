@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'
 
 import { loginCredentils } from '../../utils/constants/dummyData'
+import * as userState from '../../utils/userState'
 
 const useLoginController = () => {
   const history = useHistory()
@@ -16,6 +17,7 @@ const useLoginController = () => {
 
   const onSubmit = () => {
     if (loginCredentils[ username ] && loginCredentils[ username ].password === password) {
+      userState.setKey('isLoggedIn', true)
       history.push('/home')
     } else setError('Wrong Credentials')
   }
