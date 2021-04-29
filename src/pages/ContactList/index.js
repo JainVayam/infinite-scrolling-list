@@ -1,6 +1,6 @@
 import React from 'react'
 import {
-  Container, List, ListItem, ListItemIcon, ListItemText, Divider, LinearProgress, CircularProgress,
+  Container, List, ListItem, ListItemIcon, ListItemText, Divider, LinearProgress,
 } from '@material-ui/core'
 
 import useContactListController from './controller'
