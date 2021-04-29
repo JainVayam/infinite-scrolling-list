@@ -1,10 +1,11 @@
 import React from 'react'
-import { Redirect, useLocation } from 'react-router-dom'
+import { Redirect } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 import userState from '../utils/userState'
 
 const RouteValidator = ({
-  isAuth, hasSidebar, hasNavbar, component: Component, path,
+  isAuth, component: Component, path,
 }) => {
   if (path === '/') return <Redirect to='/home' />
   if (isAuth) {
@@ -13,13 +14,20 @@ const RouteValidator = ({
         <Component />
       )
     }
+  } else {
     return (
-      <Redirect to={ {
-        pathname: '/login',
-      } }
-      />
+      <Component />
     )
   }
+  return (
+    <Redirect to='/login' />
+  )
+}
+
+RouteValidator.propTypes = {
+  component: PropTypes.func.isRequired,
+  isAuth: PropTypes.bool.isRequired,
+  path: PropTypes.string.isRequired,
 }
 
 export default RouteValidator
