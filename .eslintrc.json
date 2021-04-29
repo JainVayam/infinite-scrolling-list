@@ -115,21 +115,6 @@
     "react/jsx-props-no-spreading": "off",
     "react/jsx-no-target-blank": "off",
     "react/no-unescaped-entities": "off",
-    "jsx-a11y/label-has-associated-control": "off",
-    //css
-    "css-modules/no-unused-class": [
-      2,
-      {
-        "camelCase": true
-      }
-    ],
-    "css-modules/no-undef-class": [
-      2,
-      {
-        "camelCase": true
-      }
-    ],
-    "react-hooks/rules-of-hooks": "error", // Checks rules of Hooks
-    "react-hooks/exhaustive-deps": "warn" // Checks effect dependencies
+    "jsx-a11y/label-has-associated-control": "off"
   }
 }
