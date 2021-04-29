@@ -2,13 +2,16 @@ import { makeStyles } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
   loginContainer: {
-    maxWidth: '50%',
+    width: '50%',
     [ theme.breakpoints.down('sm') ]: {
-      maxWidth: '100%',
+      minWidth: '100%',
     },
   },
   loginCard: {
-    maxWidth: '50%',
+    [ theme.breakpoints.down('sm') ]: {
+      minWidth: '100%',
+    },
+    width: '50%',
     margin: 'auto',
     textAlign: 'center',
   },
