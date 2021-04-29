@@ -2,12 +2,12 @@ import React from 'react'
 import { Redirect } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
-import userState from '../utils/userState'
+import * as userState from '../utils/userState'
 
 const RouteValidator = ({
   isAuth, component: Component, path,
 }) => {
-  if (path === '/') return <Redirect to='/home' />
+  if (path === '/login' && userState.isLoggedIn()) return <Redirect to='/home' />
   if (isAuth) {
     if (userState.isLoggedIn()) {
       return (

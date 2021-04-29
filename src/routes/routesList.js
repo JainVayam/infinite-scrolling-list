@@ -8,7 +8,7 @@ const routesList = [ {
 }, {
   path: '/home',
   component: ContactList,
-  isAuth: false,
+  isAuth: true,
 } ]
 
 export default routesList
