@@ -15,8 +15,8 @@ const ContactList = () => {
       <List className={ classes.list }>
         {contactList.map(({ name, image, id }) => (
           <div key={ id }>
-            <ListItem>
-              <ListItemIcon>
+            <ListItem classes={ { gutters: classes.listItemGutters } }>
+              <ListItemIcon className={ classes.listItemIcon }>
                 <img className={ classes.contactImage } alt='N/A' src={ image } />
               </ListItemIcon>
               <ListItemText className={ classes.listText } primary={ name } />
